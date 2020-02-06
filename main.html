@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>Goals测试主HTML</title>
+	</head>
+
+	<body>
+	</body>
+	<script type="text/javascript" src="lib/1.0.0/goals.compatibility.js"></script>
+	<script type="text/javascript" src="lib/1.0.0/goals.xml.js"></script>
+	<script type="text/javascript" src="lib/1.0.0/goals.request.js"></script>
+	<script type="text/javascript" src="lib/1.0.0/goals.chaotic.js"></script>
+	<script type="text/javascript" src="lib/1.0.0/goals.page.js"></script>
+	<script>
+		(function(goals) {
+			goals.init({
+				project: '/Goals',
+				hashEncrypt: true,
+				page: 'test/one'
+			});
+		}(Goals));
+	</script>
+</html>
