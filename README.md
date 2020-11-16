@@ -22,13 +22,13 @@
 
 ## 版本特性
 
-`Goals2.0` 版本起，优化了许多代码，并且支持组件，[Goals2.0.0下载](lib/goals-2.0.0.js)，[整包下载](lib/goals-2.0.0.zip)。
+`Goals2.0` 版本起，优化了许多代码，并且支持组件，[Goals2.0.0下载](http://goals.hutrace.info/doc/2.0.0/)，[整包下载](http://goals.hutrace.info/doc/2.0.0/)。
 
 是什么组件？
 
 凡是能够被复用的，都可以称之为组件，就这么简单！
 
-`Goals` 的组件和其它组件可能有些不同，它和页面（ `view` ）类似，和页面具有非常多的相同属性以及方法。具体见 `GoalsPage.GoalsComponent` 的 `API` 列表
+`Goals` 的组件和其它组件可能有些不同，它和页面（ `view` ）类似，和页面具有非常多的相同属性以及方法。具体见 [`GoalsPage.GoalsComponent` 的 `API`](http://goals.hutrace.info/doc/2.0.0/interfaces/_goals_d_.goalspage.instancecomponent.html) 列表
 
 
 ## 注意事项
@@ -50,7 +50,7 @@
 `Goals` 中有很多模块，它的核心模块是 `GoalsView` 模块以及 `GoalsXML` 模块
 
 `GoalsXML` 实现了解析 `html` ， `GoalsView` 实现了页面的生命周期以及页面属性的绑定。
-各个模块的作用见 `API` 文档
+各个模块的作用见 [`API`](http://goals.hutrace.info/doc/2.0.0/) 文档
 
 
 ## 入门使用
@@ -194,4 +194,4 @@ GoalsPage({
 > 从这里可以总结出：当组件中，没有在 `data` 中声明的属性，但是使用过的属性，该属性会自动继承页面的对应属性（特殊说明：组件可以内嵌组件，内部组件和外部组件的关系和此处的组件与页面关系一样），当在子组件中使用 `setData` 改变值的时候，其父页面/父组件的内容不会改变，当父页面/父组件使用 `setData` 改变值的时候，这种情况下所有的子孙组件都会对应改变。
 * `component3`：使用了表达式 `${hello}` ，且本身声明了 `hello` 属性，它和 `component2` 的区别在于，他的 `hello` 属性是独立的，不会随着父级的改变而改变。
 
-上面介绍的是组件的基本用法，也有更高级的用法，种类很多，这里大概阐述一下，在 `js` 中初始创建组件时，有一个较为重要的属性和一个较为重要的回调函数，分别是 `node` 属性和 `oncreate` 回调函数，通过他们可以实现非常高级的组件使用方式，详情见组件 `API` 文档。
+上面介绍的是组件的基本用法，也有更高级的用法，种类很多，这里大概阐述一下，在 `js` 中初始创建组件时，有一个较为重要的属性和一个较为重要的回调函数，分别是 `node` 属性和 `oncreate` 回调函数，通过他们可以实现非常高级的组件使用方式，详情见组件 [`API`](http://goals.hutrace.info/doc/2.0.0/) 文档。
