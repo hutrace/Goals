@@ -28,7 +28,7 @@
 
 凡是能够被复用的，都可以称之为组件，就这么简单！
 
-`Goals` 的组件和其它组件可能有些不同，它和页面（ `view` ）类似，和页面具有非常多的相同属性以及方法。具体见 [`GoalsPage.GoalsComponent` 的 `API`](http://goals.hutrace.info/doc/2.0.0/interfaces/_goals_d_.goalspage.instancecomponent.html) 列表
+`Goals` 的组件和其它组件可能有些不同，它和页面（ `view` ）类似，和页面具有非常多的相同属性以及方法。具体见 [`GoalsPage.GoalsComponent`](http://goals.hutrace.info/doc/2.0.0/interfaces/_goals_d_.goalspage.instancecomponent.html) 的 `API` 列表
 
 
 ## 注意事项
