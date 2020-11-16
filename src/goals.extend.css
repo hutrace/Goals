@@ -1,0 +1,12 @@
+input[type="number"] {-moz-appearance: textfield;}
+input, select, textarea, input:focus, select:focus, textarea:focus {outline: none;}
+input, select, textarea, .border-transition {border: 1px solid #e8e8e8;padding: 0 5px;
+    -webkit-transition: border 0.3s ease-in-out;-moz-transition: border 0.3s ease-in-out;
+    -o-transition: border 0.3s ease-in-out;transition: border 0.3s ease-in-out;}
+input:focus, select:focus, textarea:focus {border: 1px solid #999;}
+
+.input {height: 32px;line-height: 32px;}
+.input-sm {height: 26px;line-height: 26px;}
+.input-tiny {height: 20px;line-height: 20px;font-size: 12px;}
+.input-primary:focus {border: 1px solid #0070cc;}
+.input-success:focus {border: 1px solid #28a745;}

@@ -1,0 +1,11 @@
+{
+    "name": "goals",
+    "displayName": "goals",
+    "description": "Goals框架",
+    "publisher": "hutrace",
+    "version": "1.0.0",
+    "engines": {},
+    "scripts": {
+        "createdoc": "typedoc --out doc1/ --includeDeclarations --name Goals --hideGenerator --exclude **/node_modules/**/*.ts tsdoc/"
+    }
+}

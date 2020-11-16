@@ -1,0 +1,54 @@
+input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {-webkit-appearance: none;}
+input[type="number"] {-moz-appearance: textfield;}
+
+.table-container {margin: 0 10px;overflow-x: hidden;overflow-y: scroll;border-left: 1px solid #e8e8e8;border-right: 1px solid #e8e8e8;}
+.table-container>table {width: 100%;border-collapse: collapse;border-spacing: 0;}
+.table-container tr {border-top: 1px solid #e8e8e8;cursor: default;}
+.table-container-head {height: 36px;line-height: 34px;border-bottom: 1px solid #e8e8e8;background-image: repeating-linear-gradient(#fefefe, #e8e8e8, #fefefe);}
+.table-container-body {height: calc(100% - 86px);border-bottom: 1px solid #e8e8e8;position: relative;}
+.table-container-body>table tr:hover {background-color: #f6f6f6;}
+.table-container-body>table tr:first-child {border-top: none;}
+.table-container>table td {margin: 0;word-break: break-all;}
+.table-container-body>table td {padding: 6px 10px;}
+.table-container-head>table td {padding: 0 10px;word-break: keep-all;overflow: hidden;}
+.paging-hint {position: absolute;left: 0;top: 0;width: 100%;text-align: center;font-size: 18px;color: #666;}
+
+.paging-infos {width: 100%;padding: 10px;font-size: 0;}
+.paging-item {display: inline-block;min-width: 30px;height: 30px;line-height: 28px;text-align: center;border: 1px solid #e8e8e8;
+    font-size: 12px;cursor: pointer;color: #666;vertical-align: top;padding: 0 5px;
+    -webkit-transition: border 0.3s ease-in-out;-moz-transition: border 0.3s ease-in-out;
+    -o-transition: border 0.3s ease-in-out;transition: border 0.3s ease-in-out;}
+.paging-left-none {border-left: 1px solid #e8e8e800;}
+.paging-primary {-webkit-transition: border 0.3s ease-in-out, background-color 0.3s ease-in-out;-moz-transition: border 0.3s ease-in-out, background-color 0.3s ease-in-out;
+    -o-transition: border 0.3s ease-in-out, background-color 0.3s ease-in-out;transition: border 0.3s ease-in-out, background-color 0.3s ease-in-out;}
+.paging-primary {-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;}
+.paging-primary:hover {border: 1px solid #999;background-color: #fff;}
+.paging-item>.fa {font-size: 18px;display: flex;align-items: center;height: 100%;width: 7px;margin: 0 auto;}
+.paging-disabled {cursor: not-allowed;color: #dedede;}
+.paging-selected {border: 1px solid #0070cc;color: #0070cc;}
+.paging-selected:hover {border: 1px solid #0070cc;color: #0070cc;}
+.paging-text {border: none;cursor: default;line-height: 30px;margin-left: 10px;}
+.paging-select {width: 70px;position: relative;text-align: left;padding-left: 15px;outline: none;
+    -webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;}
+.paging-select:before {content: "\f107";font: normal normal normal 18px/1 FontAwesome;position: absolute;right: 10px;
+    width: 18px;height: 18px;top: 5px;text-align: center;
+    -webkit-transition: transform 0.3s ease-in-out;-moz-transition: transform 0.3s ease-in-out;
+    -o-transition: transform 0.3s ease-in-out;transition: transform 0.3s ease-in-out;}
+.paging-select:focus {outline: none;border: 1px solid #0070cc;}
+.paging-select:focus:before {transform: rotate(180deg);}
+.paging-selectopts {position: absolute;bottom: 100%;left: -1px;right: -1px;background-color: #fff;border: 1px solid #0070cc;
+    border-bottom: 1px solid #e8e8e8;overflow: hidden;height: 0;display: none;z-index: 3;
+    -webkit-transition: height 0.2s ease-in-out;-moz-transition: height 0.2s ease-in-out;
+    -o-transition: height 0.2s ease-in-out;transition: height 0.2s ease-in-out;}
+.paging-selectopts>.paging-selectopt {padding-left: 15px;
+    -webkit-transition: background-color 0.2s ease-in-out;-moz-transition: background-color 0.2s ease-in-out;
+    -o-transition: background-color 0.2s ease-in-out;transition: background-color 0.2s ease-in-out;}
+.paging-selectopts>.paging-selectopt:hover {background-color: #f2f2f2;}
+.paging-selectopts>.paging-selectopt-selected {background-color: #f2f2f2;position: relative;}
+.paging-selectopts>.paging-selectopt-selected:before {content: "\f00c";font: normal normal normal 12px/1 FontAwesome;position: absolute;
+    right: 10px;width: 12px;height: 12px;top: 8px;color: #0070cc;}
+.paging-input {outline: none;width: 50px;cursor: default;}
+.paging-input:focus {outline: none;border: 1px solid #0070cc;}
+.paging-input-text {border: none;cursor: default;line-height: 30px;margin-left: 0px;min-width: auto;}
+.paging-btn-sure {background-color: #fafafa;padding: 0 16px;}
+.paging-highlight {font-size: 12px; color: #0070cc;margin: 0 2px;}
