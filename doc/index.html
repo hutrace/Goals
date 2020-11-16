@@ -1,0 +1,302 @@
+<!doctype html>
+<html class="default no-js">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Goals</title>
+	<meta name="description" content="Documentation for Goals">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+<header>
+	<div class="tsd-page-toolbar">
+		<div class="container">
+			<div class="table-wrap">
+				<div class="table-cell" id="tsd-search" data-index="assets/js/search.json" data-base=".">
+					<div class="field">
+						<label for="tsd-search-field" class="tsd-widget search no-caption">Search</label>
+						<input id="tsd-search-field" type="text" />
+					</div>
+					<ul class="results">
+						<li class="state loading">Preparing search index...</li>
+						<li class="state failure">The search index is not available</li>
+					</ul>
+					<a href="index.html" class="title">Goals</a>
+				</div>
+				<div class="table-cell" id="tsd-widgets">
+					<div id="tsd-filter">
+						<a href="#" class="tsd-widget options no-caption" data-toggle="options">Options</a>
+						<div class="tsd-filter-group">
+							<div class="tsd-select" id="tsd-filter-visibility">
+								<span class="tsd-select-label">All</span>
+								<ul class="tsd-select-list">
+									<li data-value="public">Public</li>
+									<li data-value="protected">Public/Protected</li>
+									<li data-value="private" class="selected">All</li>
+								</ul>
+							</div>
+							<input type="checkbox" id="tsd-filter-inherited" checked />
+							<label class="tsd-widget" for="tsd-filter-inherited">Inherited</label>
+							<input type="checkbox" id="tsd-filter-externals" checked />
+							<label class="tsd-widget" for="tsd-filter-externals">Externals</label>
+							<input type="checkbox" id="tsd-filter-only-exported" />
+							<label class="tsd-widget" for="tsd-filter-only-exported">Only exported</label>
+						</div>
+					</div>
+					<a href="#" class="tsd-widget menu no-caption" data-toggle="menu">Menu</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="tsd-page-title">
+		<div class="container">
+			<ul class="tsd-breadcrumb">
+				<li>
+					<a href="globals.html">Globals</a>
+				</li>
+			</ul>
+			<h1>Goals</h1>
+		</div>
+	</div>
+</header>
+<div class="container container-main">
+	<div class="row">
+		<div class="col-8 col-content">
+			<div class="tsd-panel tsd-typography">
+				<a href="#goals" id="goals" style="color: inherit; text-decoration: none;">
+					<h1>Goals</h1>
+				</a>
+				<a href="#简介" id="简介" style="color: inherit; text-decoration: none;">
+					<h2>简介</h2>
+				</a>
+				<p><code>Goals</code> 是 <code>HashFrame</code> 的特大升级版，所以，它也是单页面应用；</p>
+				<p>单页面应用的好处在于</p>
+				<ol>
+					<li>加载速度非常快，不会二次加载公共资源。</li>
+					<li>对服务器压力小，服务器只用出数据就可以，不用管展示逻辑和页面合成，吞吐能力会提高几倍。</li>
+					<li>打开新页面完全采用异步Ajax加载，没有页面之间的切换，不会出现“白屏”与“假死”现象，页面显示流畅，web应用更具响应性和更令人着迷；这样的体验才更像应用，而不是网页。</li>
+					<li>...</li>
+				</ol>
+				<p>缺点是</p>
+				<ol>
+					<li>无法做SEO</li>
+					<li>使用页面缓存时，id选择器和class选择器无法达到想要的结果</li>
+					<li>...</li>
+				</ol>
+				<p><code>Goals</code> 在缺点上做了优化，SEO可采用中间件（ <code>Node.js</code> 或其它语言实现），实现中间件编译。</p>
+				<p>而id选择器等， <code>Goals</code> 定义了 <code>goals-id</code> 选择器，它完美避免了多页面重复 <code>id/class</code> 。</p>
+				<a href="#版本特性" id="版本特性" style="color: inherit; text-decoration: none;">
+					<h2>版本特性</h2>
+				</a>
+				<p><code>Goals2.0</code> 版本起，优化了许多代码，并且支持组件，<a href="lib/goals-2.0.0.js">Goals2.0.0下载</a>，<a href="lib/goals-2.0.0.zip">整包下载</a>。</p>
+				<p>是什么组件？</p>
+				<p>凡是能够被复用的，都可以称之为组件，就这么简单！</p>
+				<p><code>Goals</code> 的组件和其它组件可能有些不同，它和页面（ <code>view</code> ）类似，和页面具有非常多的相同属性以及方法。具体见 <code>GoalsPage.GoalsComponent</code> 的 <code>API</code> 列表</p>
+				<a href="#注意事项" id="注意事项" style="color: inherit; text-decoration: none;">
+					<h2>注意事项</h2>
+				</a>
+				<ul>
+					<li>不能在标签内部的最末尾保留空格，否则会解析错误</li>
+				</ul>
+				<blockquote>
+					<p>错误例子：<code>&lt;div class=&quot;test&quot; &gt;&lt;/div&gt;</code> 、 <code>&lt;input type=&quot;text&quot; / &gt;</code></p>
+				</blockquote>
+				<blockquote>
+					<p>正确例子：<code>&lt;div class=&quot;test&quot;&gt;&lt;/div&gt;</code> 、 <code>&lt;input type=&quot;text&quot; /&gt;</code> (&quot;/&quot;之前的空格就随心情了，再多也没事)</p>
+				</blockquote>
+				<ul>
+					<li><code>Goals</code>对标签属性保留了一个关键字，叫做 <code>GoalsText</code> ，当属性中存在表达式的时候，属性名不能为 <code>GoalsText</code> ，当然，正常情况下没人会这样写属性，因为 <code>html</code> 标签属性浏览器都会转换成小写的，那万一不正常了呢？</li>
+				</ul>
+				<blockquote>
+					<p>错误示例：<code>&lt;div GoalsText=&quot;${txt}&quot;&gt;&lt;/div&gt;</code>
+					正确示例：<code>&lt;div GoalsText=&quot;abcdefg&quot;&gt;&lt;/div&gt;</code> 或者 <code>&lt;div goalstext=&quot;${txt}&quot;&gt;&lt;/div&gt;</code> 再或者 <code>&lt;div goals-text=&quot;${txt}&quot;&gt;&lt;/div&gt;</code></p>
+				</blockquote>
+				<a href="#goals解析" id="goals解析" style="color: inherit; text-decoration: none;">
+					<h2>Goals解析</h2>
+				</a>
+				<p><code>Goals</code> 中有很多模块，它的核心模块是 <code>GoalsView</code> 模块以及 <code>GoalsXML</code> 模块</p>
+				<p><code>GoalsXML</code> 实现了解析 <code>html</code> ， <code>GoalsView</code> 实现了页面的生命周期以及页面属性的绑定。
+				各个模块的作用见 <code>API</code> 文档</p>
+				<a href="#入门使用" id="入门使用" style="color: inherit; text-decoration: none;">
+					<h2>入门使用</h2>
+				</a>
+				<p><strong>Goals使用非常简单，你需要一个主html页面，它是所有页面的容器</strong></p>
+				<p><strong><em>main.html</em></strong></p>
+				<pre><code class="language-html"><span class="hljs-meta">&lt;!DOCTYPE <span class="hljs-meta-keyword">html</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">html</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">charset</span>=<span class="hljs-string">&quot;UTF-8&quot;</span>/&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">title</span>&gt;</span>Hello Goals<span class="hljs-tag">&lt;/<span class="hljs-name">title</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;text/javascript&quot;</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;lib/goals.js&quot;</span> &gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
+        <span class="hljs-comment">// project的值为当前项目名，如果你的访问不用加项目名，则为空字符串</span>
+        <span class="hljs-comment">// page的值为首次打开的页面，按照当前html文件的相对路径，不需要后缀</span>
+        Goals.init({
+            <span class="hljs-attr">project</span>: <span class="hljs-string">&#x27;/test&#x27;</span>,
+            <span class="hljs-attr">hashEncrypt</span>: <span class="hljs-literal">true</span>,
+            <span class="hljs-attr">page</span>: <span class="hljs-string">&#x27;one&#x27;</span>
+        });
+    </span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span></code></pre>
+				<p><strong><em>one.html</em></strong></p>
+				<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>${hello}<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>让我们试试表达式的使用吧<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code></pre>
+				<p><strong><em>one.js</em></strong></p>
+				<pre><code class="language-js">GoalsPage({
+    <span class="hljs-attr">data</span>: {
+        <span class="hljs-attr">hello</span>: <span class="hljs-string">&#x27;Hello world !!!&#x27;</span>
+    },
+    <span class="hljs-attr">notImportDefaultCss</span>: <span class="hljs-literal">false</span>,
+    <span class="hljs-attr">onready</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+        <span class="hljs-keyword">var</span> self = <span class="hljs-built_in">this</span>;
+        <span class="hljs-comment">// 延迟2秒修改hello的值</span>
+        <span class="hljs-built_in">setTimeout</span>(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+            self.setData({<span class="hljs-attr">hello</span>: <span class="hljs-string">&#x27;你好，世界！&#x27;</span>});
+        }, <span class="hljs-number">2000</span>);
+        <span class="hljs-comment">// 如果使用es6，那就更简单了，你也可以使用另一种方式</span>
+        <span class="hljs-built_in">setTimeout</span>(<span class="hljs-built_in">this</span>.setData, <span class="hljs-number">4000</span>, {<span class="hljs-attr">hello</span>: <span class="hljs-string">&#x27;Hello world !!!&#x27;</span>});
+    }
+})</code></pre>
+				<a href="#goals组件说明" id="goals组件说明" style="color: inherit; text-decoration: none;">
+					<h2>Goals组件说明</h2>
+				</a>
+				<p>组件使用稍微复杂，它的使用方式非常多，说不完，可根据实际情况进行书写。</p>
+				<p>你可以在一个项目中有一个专门写组件的 <code>js</code> ，当然，也可以一个组件一个 <code>js</code> ，看心情以及是否好维护。</p>
+				<p><strong>首先需要创建一个 <code>js</code> ，用于存放组件。</strong></p>
+				<p><strong><em>component.js</em></strong></p>
+				<pre><code class="language-js"><span class="hljs-comment">// 这里创建一个名字叫做component1的组件</span>
+GoalsComponent(<span class="hljs-string">&#x27;component1&#x27;</span>, {
+    <span class="hljs-comment">// 这里的view支持html代码，html文件绝对路径、相对路径以及网络路径，详情见API文档</span>
+    <span class="hljs-attr">view</span>: <span class="hljs-string">&#x27;&lt;div&gt;Hello Goals component !!!&lt;/div&gt;&#x27;</span>
+});
+<span class="hljs-comment">// 这里创建一个名字叫做component2的组件</span>
+GoalsComponent(<span class="hljs-string">&#x27;component2&#x27;</span>, {
+    <span class="hljs-attr">view</span>: <span class="hljs-string">&#x27;&lt;div&gt;${hello}&lt;/div&gt;&#x27;</span>,
+    <span class="hljs-attr">onshow</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+        <span class="hljs-built_in">setTimeout</span>(<span class="hljs-built_in">this</span>.setData, <span class="hljs-number">2000</span>, {<span class="hljs-attr">hello</span>: <span class="hljs-string">&#x27;你好，世界！&#x27;</span>});
+    }
+});
+<span class="hljs-comment">// 这里创建一个名字叫做component3的组件</span>
+GoalsComponent(<span class="hljs-string">&#x27;component3&#x27;</span>, {
+    <span class="hljs-attr">data</span>: {<span class="hljs-attr">hello</span>: <span class="hljs-string">&#x27;Hello World&#x27;</span>},
+    <span class="hljs-attr">view</span>: <span class="hljs-string">&#x27;&lt;div&gt;${hello}&lt;/div&gt;&#x27;</span>,
+    <span class="hljs-attr">onshow</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+        <span class="hljs-built_in">setTimeout</span>(<span class="hljs-built_in">this</span>.setData, <span class="hljs-number">2000</span>, {<span class="hljs-attr">hello</span>: <span class="hljs-string">&#x27;你好，世界！&#x27;</span>});
+    }
+});</code></pre>
+				<p><strong>创建容器页面</strong></p>
+				<p><strong><em>container.html</em></strong></p>
+				<pre><code class="language-html"><span class="hljs-meta">&lt;!DOCTYPE <span class="hljs-meta-keyword">html</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">html</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">charset</span>=<span class="hljs-string">&quot;UTF-8&quot;</span>/&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">title</span>&gt;</span>Hello Goals<span class="hljs-tag">&lt;/<span class="hljs-name">title</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;text/javascript&quot;</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;lib/goals.js&quot;</span> &gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
+        <span class="hljs-comment">// project的值为当前项目名，如果你的访问不用加项目名，则为空字符串</span>
+        <span class="hljs-comment">// page的值为首次打开的页面，按照当前html文件的相对路径，不需要后缀</span>
+        <span class="hljs-comment">// 具体属性见API文档</span>
+        Goals.init({
+            <span class="hljs-attr">project</span>: <span class="hljs-string">&#x27;/test&#x27;</span>,
+            <span class="hljs-attr">page</span>: <span class="hljs-string">&#x27;page/test&#x27;</span>
+        });
+    </span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span></code></pre>
+				<p><strong>创建一个测试页面，你可以放在一个文件夹内，例如，在container.html同级下创建page文件夹</strong></p>
+				<p><strong><em>page/test.html</em></strong></p>
+				<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>${hello}<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">component1</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">component1</span>&gt;</span>
+<span class="hljs-comment">&lt;!-- 如果你的组件中不需要支持子元素，你可以使用单标签的写法，要记得加&#x27;/&#x27;哦 --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">component2</span>/&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">component3</span>/&gt;</span></code></pre>
+				<p><strong><em>page/test.js</em></strong></p>
+				<pre><code class="language-javascript">GoalsPage({
+    <span class="hljs-attr">data</span>: {
+        <span class="hljs-attr">hello</span>: <span class="hljs-string">&#x27;Hello World&#x27;</span>
+    },
+    <span class="hljs-attr">notImportDefaultCss</span>: <span class="hljs-literal">true</span>,
+    <span class="hljs-attr">onready</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+        <span class="hljs-built_in">setTimeout</span>(<span class="hljs-built_in">this</span>.setData, <span class="hljs-number">5000</span>, {<span class="hljs-attr">hello</span>: <span class="hljs-string">&#x27;Hello World !!!&#x27;</span>});
+    }
+})</code></pre>
+				<p><strong>说明：你可以按照上面的例子实验，你会发现他们的区别</strong></p>
+				<ul>
+					<li><code>component1</code>：很简单，没有什么，就只是简单的标签，没有表达式</li>
+					<li><code>component2</code>：使用了表达式 <code>${hello}</code> ，但本身并没有在 <code>data</code> 中声明 <code>hello</code> 属性，它会自动继承来自页面 <code>page/test.js</code> 下的 <code>hello</code> 属性，且注意看延迟 <code>2s</code> 执行的 <code>setData</code> ，当 <code>component2</code> 调用 <code>setData</code> 的时候，改变的仅仅是 <code>component2</code> 的 <code>hello</code> 属性，并不会全局更改，而再看 <code>page/test.js</code> 延迟 <code>5s</code> 执行的 <code>setData</code> ，当它这些之后，改变的内容包含了 <code>component2</code> 下所使用的 <code>hello</code> 属性。</li>
+				</ul>
+				<blockquote>
+					<p>从这里可以总结出：当组件中，没有在 <code>data</code> 中声明的属性，但是使用过的属性，该属性会自动继承页面的对应属性（特殊说明：组件可以内嵌组件，内部组件和外部组件的关系和此处的组件与页面关系一样），当在子组件中使用 <code>setData</code> 改变值的时候，其父页面/父组件的内容不会改变，当父页面/父组件使用 <code>setData</code> 改变值的时候，这种情况下所有的子孙组件都会对应改变。</p>
+				</blockquote>
+				<ul>
+					<li><code>component3</code>：使用了表达式 <code>${hello}</code> ，且本身声明了 <code>hello</code> 属性，它和 <code>component2</code> 的区别在于，他的 <code>hello</code> 属性是独立的，不会随着父级的改变而改变。</li>
+				</ul>
+				<p>上面介绍的是组件的基本用法，也有更高级的用法，种类很多，这里大概阐述一下，在 <code>js</code> 中初始创建组件时，有一个较为重要的属性和一个较为重要的回调函数，分别是 <code>node</code> 属性和 <code>oncreate</code> 回调函数，通过他们可以实现非常高级的组件使用方式，详情见组件 <code>API</code> 文档。</p>
+			</div>
+		</div>
+		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
+			<nav class="tsd-navigation primary">
+				<ul>
+					<li class="globals  ">
+						<a href="globals.html"><em>Globals</em></a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_goals_component_d_.html">&quot;goals.component.d&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_goals_d_.html">&quot;goals.d&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_goals_paging_d_.html">&quot;goals.paging.d&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_goals_popup_d_.html">&quot;goals.popup.d&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_goals_prompt_d_.html">&quot;goals.prompt.d&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_goals_security_d_.html">&quot;goals.security.d&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_goals_utils_d_.html">&quot;goals.utils.d&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_goals_validate_d_.html">&quot;goals.validate.d&quot;</a>
+					</li>
+				</ul>
+			</nav>
+			<nav class="tsd-navigation secondary menu-sticky">
+				<ul class="before-current">
+				</ul>
+			</nav>
+		</div>
+	</div>
+</div>
+<footer>
+	<div class="container">
+		<h2>Legend</h2>
+		<div class="tsd-legend-group">
+			<ul class="tsd-legend">
+				<li class="tsd-kind-namespace"><span class="tsd-kind-icon">Namespace</span></li>
+				<li class="tsd-kind-variable"><span class="tsd-kind-icon">Variable</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-interface"><span class="tsd-kind-icon">Interface</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-class"><span class="tsd-kind-icon">Class</span></li>
+			</ul>
+		</div>
+	</div>
+</footer>
+<div class="overlay"></div>
+<script src="assets/js/main.js"></script>
+</body>
+</html>
