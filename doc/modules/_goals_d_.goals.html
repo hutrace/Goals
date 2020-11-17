@@ -98,6 +98,7 @@
 								<li class="tsd-kind-function tsd-parent-kind-namespace"><a href="_goals_d_.goals.html#addlistener" class="tsd-kind-icon">add<wbr>Listener</a></li>
 								<li class="tsd-kind-function tsd-parent-kind-namespace"><a href="_goals_d_.goals.html#assert" class="tsd-kind-icon">assert</a></li>
 								<li class="tsd-kind-function tsd-parent-kind-namespace"><a href="_goals_d_.goals.html#combine" class="tsd-kind-icon">combine</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-namespace"><a href="_goals_d_.goals.html#createcomponent" class="tsd-kind-icon">create<wbr>Component</a></li>
 								<li class="tsd-kind-function tsd-parent-kind-namespace"><a href="_goals_d_.goals.html#currenturl" class="tsd-kind-icon">current<wbr>Url</a></li>
 								<li class="tsd-kind-function tsd-parent-kind-namespace"><a href="_goals_d_.goals.html#exportcss" class="tsd-kind-icon">export<wbr>Css</a></li>
 								<li class="tsd-kind-function tsd-parent-kind-namespace"><a href="_goals_d_.goals.html#exportjs" class="tsd-kind-icon">export<wbr>Js</a></li>
@@ -359,6 +360,74 @@
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
 							<p>拷贝至目标</p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-namespace">
+					<a name="createcomponent" class="tsd-anchor"></a>
+					<h3>create<wbr>Component</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-namespace">
+						<li class="tsd-signature tsd-kind-icon">create<wbr>Component<span class="tsd-signature-symbol">(</span>componentName<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, container<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">HTMLDivElement</span>, view<span class="tsd-signature-symbol">: </span><a href="../interfaces/_goals_d_.goalspage.goalsview.html" class="tsd-signature-type">GoalsView</a>, callback<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">(</span>component<span class="tsd-signature-symbol">: </span><a href="../interfaces/_goals_d_.goalspage.goalscomponent.html" class="tsd-signature-type">GoalsComponent</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in goals.d.ts:1065</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p><code>2.1.0</code>新增
+									手动创建组件</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>componentName: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>组件名称</p>
+									</div>
+								</li>
+								<li>
+									<h5>container: <span class="tsd-signature-type">HTMLDivElement</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>组件的容器</p>
+									</div>
+								</li>
+								<li>
+									<h5>view: <a href="../interfaces/_goals_d_.goalspage.goalsview.html" class="tsd-signature-type">GoalsView</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>页面对象</p>
+									</div>
+								</li>
+								<li>
+									<h5>callback: <span class="tsd-signature-symbol">(</span>component<span class="tsd-signature-symbol">: </span><a href="../interfaces/_goals_d_.goalspage.goalscomponent.html" class="tsd-signature-type">GoalsComponent</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">void</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>创建组件完成的回调方法，可以接收创建的组件对象</p>
+									</div>
+									<ul class="tsd-parameters">
+										<li class="tsd-parameter-signature">
+											<ul class="tsd-signatures tsd-kind-type-literal">
+												<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>component<span class="tsd-signature-symbol">: </span><a href="../interfaces/_goals_d_.goalspage.goalscomponent.html" class="tsd-signature-type">GoalsComponent</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+											</ul>
+											<ul class="tsd-descriptions">
+												<li class="tsd-description">
+													<h4 class="tsd-parameters-title">Parameters</h4>
+													<ul class="tsd-parameters">
+														<li>
+															<h5>component: <a href="../interfaces/_goals_d_.goalspage.goalscomponent.html" class="tsd-signature-type">GoalsComponent</a></h5>
+														</li>
+													</ul>
+													<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+												</li>
+											</ul>
+										</li>
+									</ul>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -714,6 +783,9 @@
 					</li>
 					<li class=" tsd-kind-function tsd-parent-kind-namespace">
 						<a href="_goals_d_.goals.html#combine" class="tsd-kind-icon">combine</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-namespace">
+						<a href="_goals_d_.goals.html#createcomponent" class="tsd-kind-icon">create<wbr>Component</a>
 					</li>
 					<li class=" tsd-kind-function tsd-parent-kind-namespace">
 						<a href="_goals_d_.goals.html#currenturl" class="tsd-kind-icon">current<wbr>Url</a>
