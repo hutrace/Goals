@@ -1,0 +1,13 @@
+{
+    "compilerOptions": {
+        "target": "es2015",
+        "allowSyntheticDefaultImports": true,
+        "checkJs": true
+    },
+    "include": [
+        "tsdoc/**/*",
+        "src/**/*",
+        "lib/**/*",
+        "page/**/*"
+    ]
+}
