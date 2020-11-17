@@ -1053,4 +1053,14 @@ declare module Goals {
      * @param callback 回调函数
      */
     function addListener(event:'hashchange', callback:(hash:string) => void):void
+
+    /**
+     * `2.1.0`新增
+     * 手动创建组件
+     * @param componentName 组件名称
+     * @param container 组件的容器
+     * @param view 页面对象
+     * @param callback 创建组件完成的回调方法，可以接收创建的组件对象
+     */
+    function createComponent(componentName:string, container:HTMLDivElement, view:GoalsPage.GoalsView, callback:(component:GoalsPage.GoalsComponent) => void);
 }
